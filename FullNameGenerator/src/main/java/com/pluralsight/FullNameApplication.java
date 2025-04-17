@@ -28,7 +28,7 @@ public class FullNameApplication {
 
         // Optional suffix
         System.out.print("Suffix (optional): ");
-        String suffix = input.nextLine().trim();
+        String suffix = input.nextLine().trim(
 
         // Build full name
         String fullName = firstName;
