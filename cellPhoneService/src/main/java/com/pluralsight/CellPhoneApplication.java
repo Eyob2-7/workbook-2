@@ -31,15 +31,16 @@ public class CellPhoneApplication {
         cellPhone1.setCarrier("T-Mobile");
         cellPhone1.setPhoneNumber("855-555-2229");
         cellPhone1.setOwner("Eric Swartz");
-        //ll
+        //Display Information for both phones
         display(myPhone);
         display(cellPhone1);
-        //
+        //Make each phone call the other
         myPhone.dial(cellPhone1.getPhoneNumber());
         cellPhone1.dial(myPhone.getPhoneNumber());
 
 
     }
+     //Method to display details of a CellPhone object
     public static void display(CellPhone phone){
         System.out.println("SN:" + phone.getSerialNumber());
         System.out.println("model:" + phone.getModel());
@@ -47,6 +48,7 @@ public class CellPhoneApplication {
         System.out.println("phone number:" + phone.getPhoneNumber());
         System.out.println("Owner:" + phone.getOwner());
     }
+     //This Method asks the user a question and return their input
     public static String question(Scanner input , String message){
         String output;
         System.out.print(message);
