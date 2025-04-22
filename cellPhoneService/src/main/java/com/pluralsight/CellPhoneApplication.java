@@ -7,6 +7,7 @@ public class CellPhoneApplication {
     public static void main(String[] args) {
         CellPhone myPhone = new CellPhone();
         CellPhone cellPhone1 = new CellPhone();
+        CellPhone thirdPhone = new CellPhone(4444,"Motorola","AT&t","123-456-789","Tim");
         //Ask the user
         String sn = question(input,"what is the serial number?");
         String model = question(input,"what is the model of the phone?");
@@ -34,10 +35,12 @@ public class CellPhoneApplication {
         //Display Information for both phones
         display(myPhone);
         display(cellPhone1);
+        display(thirdPhone);
         //Make each phone call the other
         myPhone.dial(cellPhone1.getPhoneNumber());
         cellPhone1.dial(myPhone.getPhoneNumber());
-
+        //Apply the dial method
+        thirdPhone.dial("000000000");
 
     }
      //Method to display details of a CellPhone object

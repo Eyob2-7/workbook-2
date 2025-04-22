@@ -8,6 +8,14 @@ public class CellPhone {
     private String phoneNumber;
     private String owner;
 
+    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
+
     //this is a constructor and in this case it is deciding the values of the properties
     public CellPhone() {
         this.serialNumber = 0;
@@ -19,6 +27,9 @@ public class CellPhone {
     //Behavior
     public void dial(String phoneNumber) {
         System.out.println(owner + "'s phone is calling " + phoneNumber);
+    }
+    public void dial(CellPhone phone){
+        System.out.println(phone);
     }
 
     // Getters
